@@ -1,0 +1,54 @@
+1)connet aws using command ----> ssh -i ./RajibJenkins2023.pem ubuntu@13.115.10.34
+
+2)intall openJdk
+root@ip-172-31-38-97:/home/ubuntu# java -version
+Command 'java' not found, but can be installed with:
+apt install openjdk-11-jre-headless  # version 11.0.17+8-1ubuntu2~22.04, or
+apt install default-jre              # version 2:1.11-72build2
+apt install openjdk-17-jre-headless  # version 17.0.5+8-2ubuntu1~22.04
+apt install openjdk-18-jre-headless  # version 18.0.2+9-2~22.04
+apt install openjdk-19-jre-headless  # version 19.0.1+10-1ubuntu1~22.04
+apt install openjdk-8-jre-headless   # version 8u352-ga-1~22.04
+root@ip-172-31-38-97:/home/ubuntu# apt install openjdk-8-jre-headless
+
+3)sudo apt update
+
+4) install docker
+
+root@ip-172-31-38-97:/home/ubuntu# docker -version
+Command 'docker' not found, but can be installed with:
+snap install docker         # version 20.10.17, or
+apt  install docker.io      # version 20.10.12-0ubuntu4
+apt  install podman-docker  # version 3.4.4+ds1-1ubuntu1
+See 'snap info docker' for additional versions.
+root@ip-172-31-38-97:/home/ubuntu# apt install docker.io
+
+5)upload docker-compose project in s3 bucket
+
+6)wget <objectname>
+
+like wget https://rajibbucket007.s3.ap-northeast-1.amazonaws.com/1676125041625_docker-compose-spring-boot-mysql-master.zip
+
+7)apt install unzip
+
+8)unzip project zip file---> unzip <project>
+
+9)install docker compose
+
+root@ip-172-31-38-97:/home/ubuntu/docker-compose-spring-boot-mysql-master# docker-compose up -d --build
+Command 'docker-compose' not found, but can be installed with:
+snap install docker          # version 20.10.17, or
+apt  install docker-compose  # version 1.29.2-1
+See 'snap info docker' for additional versions.
+root@ip-172-31-38-97:/home/ubuntu/docker-compose-spring-boot-mysql-master# apt install docker-compose
+
+10) go to project folder and execute -----> docker-compose up -d --build
+
+11)http://13.115.10.34:6868/api/tutorials -- post request
+
+{
+    "title":"Dtastructureaws2",
+    "description":"DtastructureAlgoBookaws2",
+    "published":true
+}
+
